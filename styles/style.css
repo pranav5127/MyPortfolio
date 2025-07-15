@@ -1,0 +1,14 @@
+
+body {
+
+    font-family: 'JetBrains Mono', 'Menlo', 'Consolas', 'Courier New', monospace;
+    background: linear-gradient(293deg, #090E31 5.09%, #241F45 98.85%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.name {
+    color: #89E890;
+    font-size: 36px;
+}
