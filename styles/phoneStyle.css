@@ -1,0 +1,209 @@
+/* ==== Global Reset & Fonts ==== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'JetBrains Mono', 'Menlo', 'Consolas', 'Courier New', monospace;
+  background: linear-gradient(293deg, #090E31 5.09%, #241F45 98.85%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==== Main Layout ==== */
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+/* Push phone to the right on wider screens */
+@media (min-width: 768px) {
+  .phone {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+
+/* Add gap between phone-top and phone-bottom for all screens below 1200px */
+@media (max-width: 1199px) {
+  .phone-top {
+    margin-bottom: 20px;
+  }
+}
+
+/* ==== Phone Sections ==== */
+.phone-common {
+  background-color: #000;
+  width: 100%;
+  height: 350px;
+}
+
+.phone-top {
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-bottom {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== Decorative Elements ==== */
+.parent-phone-nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+}
+
+.phone-nav {
+  height: 4px;
+  width: 150px;
+  border-radius: 4px;
+  background-color: #474545;
+}
+
+.parent-phone-circle {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+
+.phone-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #474545;
+}
+
+/* ==== Card Layouts ==== */
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #241F45;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px 50px;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.name-card {
+  display: flex;
+  align-items: center;
+  background-color: #241F45;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px 50px;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* ==== Profile Image ==== */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* ==== Text ==== */
+.name {
+  padding: 2px 0;
+  text-align: left;
+  font-size: 28px;
+  margin: 0;
+}
+
+.text-g {
+  color: #89E890;
+}
+
+.text-w {
+  color: white;
+}
+
+.hero-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==== Technology Icons ==== */
+.tech-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logos {
+  width: 40px;
+  height: 40px;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 600px) {
+  .name {
+    font-size: 22px;
+  }
+
+  .hero-card,
+  .name-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logos {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .name {
+    font-size: 18px;
+  }
+
+  .hero-card,
+  .name-card {
+    padding: 10px;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logos {
+    width: 30px;
+    height: 30px;
+  }
+}
